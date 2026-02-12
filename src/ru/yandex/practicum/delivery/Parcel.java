@@ -15,6 +15,14 @@ public abstract class Parcel {
         this.baseRate = baseRate;
     }
 
+    public int getWeight() {
+        return weight;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
     public void packageItem() {
         System.out.println("Посылка <<" + description + ">> упакована");
     }
