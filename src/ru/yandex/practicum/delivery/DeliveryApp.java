@@ -103,13 +103,13 @@ public class DeliveryApp {
         String choice = scanner.nextLine();
         switch (choice) {
             case "1":
-                standardParcelBox.getAllParcels();
+                printAllParcelsInBox(standardParcelBox.getAllParcels());
                 break;
             case "2":
-                fragileParcelBox.getAllParcels();
+                printAllParcelsInBox(fragileParcelBox.getAllParcels());
                 break;
             case "3":
-                perishableParcelBox.getAllParcels();
+                printAllParcelsInBox(perishableParcelBox.getAllParcels());
                 break;
             default:
                 System.out.println("Введен некорректный тип посылки.");
@@ -150,6 +150,12 @@ public class DeliveryApp {
             totalCost += parcel.calculateDeliveryCost();
         }
         System.out.println("Общая сумма всех доставок: " + totalCost);
+    }
+
+    private static <T extends Parcel> void printAllParcelsInBox(List<T> parcels) {
+        for (int i = 0; i < parcels.size(); i++) {
+            System.out.println(i + ". " + parcels.get(i).getDescription());
+        }
     }
 
 }

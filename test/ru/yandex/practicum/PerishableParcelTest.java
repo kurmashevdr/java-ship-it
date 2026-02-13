@@ -11,7 +11,7 @@ public class PerishableParcelTest {
     private static PerishableParcel perishableParcel;
 
     @BeforeAll
-    public static void beforeAll() {
+    public static void initBox() {
         perishableParcel = new PerishableParcel("abv", 15, "adress", 5, 10);
     }
     @Test

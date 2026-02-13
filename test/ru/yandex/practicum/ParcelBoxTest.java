@@ -10,7 +10,7 @@ import ru.yandex.practicum.delivery.StandardParcel;
 public class ParcelBoxTest {
     private ParcelBox<StandardParcel> parcelBox;
     @BeforeEach
-    public void beforeEach() {
+    public void initBox() {
         parcelBox = new ParcelBox<>(20);
     }
 
